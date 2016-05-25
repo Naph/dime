@@ -1,0 +1,25 @@
+{
+  "name": "dime",
+  "version": "1.0.0",
+  "description": "Personal front-end Lumen/Laravel asset structure",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "bootstrap-sass": "^3.3.6",
+    "hammerjs": "^2.0.8",
+    "jquery": "^2.2.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Naph/dime.git"
+  },
+  "author": "Lachlan du Preez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Naph/dime/issues"
+  },
+  "homepage": "https://github.com/Naph/dime#readme"
+}
