@@ -1,0 +1,10 @@
+#hero {
+  @include background-image(center top, no-repeat, cover);
+  position: relative;
+
+  @media(max-width: $screen-sm-max)
+  {
+    background-color: transparentize($brand-primary-light, 0.25);
+    background-blend-mode: overlay;
+  }
+}

@@ -1,0 +1,56 @@
+#gallery {
+
+  .panel {
+    @include background-image(center center, no-repeat, cover);
+
+    height: 322px;
+    width:100%;
+
+    position:relative;
+    display: table;
+
+    h2 {
+      opacity: 0;
+
+      display: table-cell;
+      position: relative;
+
+      word-spacing: 1000px;
+      font-family: $font-primary;
+      font-weight: 100;
+      text-transform: uppercase;
+      text-align: center;
+      color: $brand-secondary-light;
+      vertical-align: middle;
+    }
+
+    &:before {
+      opacity: 0;
+
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+
+      background-color: $brand-gray-dark;
+    }
+
+    &:hover {
+
+      h2,
+      &:before {
+        @include transition(opacity 300ms);
+      }
+
+      h2 {
+        opacity:1;
+      }
+
+      &:before {
+        opacity:.5;
+      }
+    }
+  }
+}

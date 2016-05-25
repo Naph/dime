@@ -1,0 +1,42 @@
+@mixin background-image($position, $repeat, $size) {
+  background-position: $position;
+  background-repeat: $repeat;
+  -webkit-background-size: $size;
+  background-size: $size;
+}
+
+@mixin transform($transform) {
+  -webkit-transform: $transform;
+  -moz-transform: $transform;
+  -ms-transform: $transform;
+  -o-transform: $transform;
+  transform: $transform;
+}
+
+@mixin transition($transition) {
+  -webkit-transition: $transition;
+  -moz-transition: $transition;
+  -ms-transition: $transition;
+  -o-transition: $transition;
+  transition: $transition;
+}
+
+@mixin container() {
+  width: 100%;
+
+  @media(min-width: $screen-sm) {width: $container-sm}
+
+  @media(min-width: $screen-md) {width: $container-md}
+
+  @media(min-width: $screen-lg) {width: $container-lg}
+}
+
+@mixin vertical-align-text() {
+  // Vertical-align siblings
+  &:after {
+    content: "";
+    height: 100%;
+    vertical-align: middle;
+    display: inline-block;
+  }
+}

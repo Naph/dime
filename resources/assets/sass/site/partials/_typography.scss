@@ -1,0 +1,88 @@
+// Headings
+h1, .h1 {
+  font: $font-weight-h1 $font-size-h1 $font-family-h1;
+  text-transform: uppercase;
+
+  @media(max-width: $screen-sm-max) {font-size: $font-size-h1 * .9}
+
+  @media(max-width: $screen-xs-max) {font-size: $font-size-h1 * .8}
+}
+
+h2, .h2 {
+  font: italic $font-weight-h2 $font-size-h2 $font-family-h2;
+
+  @media(max-width: $screen-sm-max) {font-size: $font-size-h2 * .9}
+
+  @media(max-width: $screen-xs-max) {font-size: $font-size-h2 * .8}
+}
+
+h3, .h3 {
+  font: $font-weight-h3 $font-size-h3 $font-family-h3;
+  text-transform: uppercase;
+
+  @media(max-width: $screen-sm-max) {font-size: $font-size-h3 * .9}
+
+  @media(max-width: $screen-xs-max) {font-size: $font-size-h3 * .8}
+}
+
+h4, .h4 {
+  font: $font-weight-h4 $font-size-h4 $font-family-h4;
+  text-transform: uppercase;
+}
+
+h1, .h1,
+h2, .h2,
+h3, .h3 {
+  margin-top:    $line-height-computed/2;
+  margin-bottom: $line-height-computed;
+}
+
+
+// Paragraph
+p {
+  margin-top:    $line-height-computed/2;
+  margin-bottom: $line-height-computed/2;
+
+  small {
+    font-size: 85%;
+  }
+}
+
+
+// Unordered and Ordered lists
+ul,
+ol {
+  margin-top: 0;
+  margin-bottom: ($line-height-computed / 2);
+  ul,
+  ol {
+    margin-bottom: 0;
+  }
+}
+
+::selection {
+  color: $brand-primary-light;
+  background-color: $brand-primary;
+}
+
+::-moz-selection {
+  color: $brand-primary-light;
+  background-color: $brand-primary;
+}
+
+hr {
+  border: 0;
+  margin: $grid-gutter-width/2 0;
+
+  width: 100%;
+  height: 1em;
+  background: url('/images/common/hr.png') center center no-repeat;
+  background-size: auto 100%;
+
+  @media
+  (-webkit-min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi) {
+    background: url('/images/common/hr@2x.png') center center no-repeat;
+    background-size: auto 100%;
+  }
+}

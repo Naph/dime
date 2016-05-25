@@ -1,0 +1,45 @@
+.form-group {
+  margin-top: $line-height-computed/2;
+  margin-bottom: $line-height-computed/2;
+
+  input {
+    margin-top: $line-height-computed/8;
+  }
+}
+
+label {
+  @extend .h4;
+  font-size: 1.2em;
+}
+
+input,
+textarea {
+
+  &:focus {
+    outline: none;
+    border: 1px solid $brand-primary;
+  }
+
+  &.error {
+    border: 1px solid $brand-danger;
+  }
+}
+
+textarea {
+  height: 9em;
+}
+
+.form-group.error {
+  input,
+  textarea {
+    border: 1px dashed $brand-danger;
+  }
+  span.error {
+    color: $brand-danger;
+  }
+}
+
+// Honeypot
+.special-field {
+  display:none;
+}
