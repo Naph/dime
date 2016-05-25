@@ -7,5 +7,9 @@ app.add({
 
     _mobileEvent: function(element) {
         return new Hammer(element);
+    },
+
+    _confirmAction: function(text, callback) {
+        confirm(text) ? typeof callback === 'function' && callback() : window.event.preventDefault();
     }
 });
