@@ -29,11 +29,11 @@ body {
   }
 
   &.ready-delay * {
-    -webkit-transition: none !important;
-    -moz-transition: none !important;
-    -ms-transition: none !important;
-    -o-transition: none !important;
-    transition: none !important;
+    @include transition(none !important);
+  }
+
+  @media(min-width: $screen-md-min) and (max-width: $screen-md-max) {
+    font-size: $font-size-base * .85;
   }
 }
 

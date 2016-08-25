@@ -22,7 +22,12 @@
 }
 
 @mixin container() {
+  position: relative;
   width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: $grid-gutter-width / 2;
+  padding-right: $grid-gutter-width / 2;
 
   @media(min-width: $screen-sm) {width: $container-sm}
 
@@ -38,5 +43,25 @@
     height: 100%;
     vertical-align: middle;
     display: inline-block;
+    margin-left: -3px;
+  }
+}
+
+@mixin border-radius($border-radius) {
+  -webkit-border-radius: $border-radius;
+  -moz-border-radius: $border-radius;
+  border-radius: $border-radius;
+}
+
+@mixin background-image-retina($file, $type, $width: auto, $height: auto) {
+  background-image: url($file + '.' + $type);
+  -webkit-background-size: $width $height;
+  background-size: $width $height;
+  @media (-webkit-min-device-pixel-ratio: 2), (-moz-min-device-pixel-ratio: 2) {
+    & {
+      background-image: url($file + '@2x.' + $type);
+      -webkit-background-size: $width $height;
+      background-size: $width $height;
+    }
   }
 }

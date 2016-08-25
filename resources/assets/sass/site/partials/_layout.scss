@@ -1,13 +1,22 @@
 .section {
   padding-top: $grid-gutter-width;
   @media(max-width: $screen-xs-max) {
-    padding-top: $grid-gutter-width / 2;
+    padding-top: $grid-gutter-width * .5;
+  }
+}
+
+.section-end {
+  padding-top: $grid-gutter-width;
+  padding-bottom: $grid-gutter-width * 2;
+  @media(max-width: $screen-xs-max) {
+    padding-top: $grid-gutter-width * .5;
+    padding-bottom: $grid-gutter-width;
   }
 }
 
 #content {
   min-height: 100%;
   @extend .clear-fix;
-  background: url('/images/common/marble-bg.jpg') center top repeat-y;
+  background: center top repeat-y;
   background-size: 100% auto;
 }

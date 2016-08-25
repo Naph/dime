@@ -1,11 +1,50 @@
 // Text alignment
-.text-left           { text-align: left; }
-.text-right          { text-align: right; }
-.text-center         { text-align: center; }
-.text-justify        { text-align: justify; }
-.text-nowrap         { white-space: nowrap; }
+.text-left        { text-align: left; }
+.text-right       { text-align: right; }
+.text-center      { text-align: center; }
+.text-justify     { text-align: justify; }
+.text-nowrap      { white-space: nowrap; }
 
 // Text transformation
-.text-lowercase      { text-transform: lowercase; }
-.text-uppercase      { text-transform: uppercase; }
-.text-capitalize     { text-transform: capitalize; }
+.text-lowercase   { text-transform: lowercase; }
+.text-uppercase   { text-transform: uppercase; }
+.text-capitalize  { text-transform: capitalize; }
+
+// Block Positioning
+.center           { margin-left: auto; margin-right: auto;}
+
+// Miscellaneous placeholder selectors
+%noselect {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+%darken-overlay {
+  html.ie & {
+    & * {
+      z-index: 0;
+    }
+
+    &:before {
+      content: "";
+      width: 100%;
+      height: 100%;
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 0;
+      background-color: rgba(0,0,0,0.5);
+    }
+  }
+
+  body:not(.ie) & {
+    background-color: transparentize(#000, 0.47);
+    background-blend-mode: multiply;
+  }
+}

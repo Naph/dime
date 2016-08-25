@@ -1,27 +1,37 @@
 // Color
-$brand-primary:         #4F6282;
-$brand-primary-light:   #D7E2F5;
-$brand-secondary:       #483C27;
-$brand-secondary-light: #ECD49D;
-$brand-gray-dark:       #393D4D;
-$brand-gray:            #C7CDC9;
+$brand-primary:           #1D2D6C;
+$brand-primary-light:     #485988;
+$brand-primary-lighter:   #CDD7F4;
+$brand-primary-lightest:  #F5F7FD;
+$brand-secondary:         #8DC82F;
+$brand-secondary-dark:    #6D9B31;
+$brand-secondary-light:   #CBE4A6;
+$brand-gray:              #E5E5E5;
+$brand-gray-dark:         #404040;
+$brand-gray-light:        #FAFAFA;
+$brand-black:             $brand-gray-dark;
 
-$brand-success: #4F6282;
-$brand-danger:  #BF544D;
-
-$text-color:        $brand-gray-dark;
-$header-color:      $brand-gray-dark;
+$brand-success:           #4F6282;
+$brand-danger:            #BC190D;
 
 $link-color:         $brand-primary;
 $link-hover-color:   $brand-primary;
 $link-hover-decoration: underline;
 
-$hr-color: $brand-gray;
+$hr-color:                $brand-gray;
 
 $button-bg:               $brand-gray-dark;
 $button-text-color:       $brand-gray;
 $button-hover-bg:         $brand-gray-dark;
 $button-hover-text-color: $brand-primary;
+
+$link-color:              $brand-secondary;
+$link-hover-color:        $brand-secondary-dark;
+$link-hover-decoration:   none;
+$link-weight:             600;
+
+$text-color:              $brand-gray-dark;
+$header-color:            $brand-gray-dark;
 
 // Fonts
 $font-primary:   Helvetica, Arial, sans-serif;
@@ -29,38 +39,41 @@ $font-secondary: Cambria, Georgia, serif;
 
 // Headings
 $font-family-h1:  $font-primary;
-$font-size-h1:    2.7em;
-$font-weight-h1:  700;
+$font-size-h1:    3em;
+$font-weight-h1:  400;
 
 $font-family-h2:  $font-secondary;
-$font-size-h2:    1.6em;
-$font-weight-h2:  400;
+$font-size-h2:    2em;
+$font-weight-h2:  200;
 
 $font-family-h3:  $font-primary;
 $font-size-h3:    1.3em;
-$font-weight-h3:  700;
+$font-weight-h3:  400;
 
 $font-family-h4:  $font-primary;
-$font-size-h4:    1.3em;
-$font-weight-h4:  100;
+$font-size-h4:    1em;
+$font-weight-h4:  600;
 
 $headings-line-height: 1.8;
 
 // Base
 $body-bg: white;
 $font-family-base: $font-primary;
-$font-weight-base: 100;
+$font-weight-base: 200;
 $font-size-base:   14px;
-$line-height-base: 1.4;
+$line-height-base: 1.6;
 $line-height-computed: $font-size-base / ($line-height-base / 2);
 
 // Header
-$header-height: 170px;
-$header-height-slim: 42px;
-$header-background-color: black;
+$header-height: 112px;
+$header-height-slim: 70px;
+$header-background-color: transparent;
+$mobile-header-background-color: transparentize($brand-primary, .2);
 
 // Navigation
 $nav-mobile-width: 220px;
+$nav-link-color: white;
+$nav-active-color: $brand-secondary;
 
 /// Bootstrap
 // Breakpoints
@@ -76,13 +89,28 @@ $screen-md:                  992px !default
 $screen-md-min:              $screen-md !default
 $screen-desktop:             $screen-md-min !default
 
-$screen-lg:                  1200px !default
+$screen-lg:                  1280px !default
 $screen-lg-min:              $screen-lg !default
 $screen-lg-desktop:          $screen-lg-min !default
+
+$screen-xl:                  1600px !default
+$screen-xl-min:              $screen-xl !default
+$screen-xl-desktop:          $screen-xl-min !default
 
 $screen-xs-max:              ($screen-sm-min - 1) !default
 $screen-sm-max:              ($screen-md-min - 1) !default
 $screen-md-max:              ($screen-lg-min - 1) !default
+
+$mobile-max: $screen-sm-max;
+$desktop-min: $screen-md-min;
+
+$breakpoints: (
+        xs: 300px,
+        sm: $screen-sm,
+        md: $screen-md,
+        lg: $screen-lg,
+        xl: $screen-xl
+);
 
 // Grid
 $grid-columns:              12 !default
